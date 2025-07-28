@@ -59,10 +59,10 @@ export default function Header() {
 
           {/* Bên phải: đăng nhập / đăng ký */}
           <div className="flex items-center space-x-4 translate-x-55">
-            <a href="#" className="hover:text-gray-300 flex items-center gap-1">
+            <a href="/login" className="hover:text-gray-300 flex items-center gap-1">
               <FaSignInAlt /> Đăng nhập
             </a>
-            <a href="#" className="hover:text-gray-300 flex items-center gap-1">
+            <a href="/register" className="hover:text-gray-300 flex items-center gap-1">
               <FaUser /> Đăng ký
             </a>
           </div>
