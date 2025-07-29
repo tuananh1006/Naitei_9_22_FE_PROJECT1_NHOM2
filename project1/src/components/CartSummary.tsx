@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 interface CartSummaryProps {
   totalBeforeTax: number;
@@ -7,35 +7,55 @@ interface CartSummaryProps {
   onCheckout: () => void;
 }
 
-const CartSummary: React.FC<CartSummaryProps> = ({ totalBeforeTax, tax, totalAfterTax, onCheckout }) => {
+const Row = ({
+  label,
+  value,
+  bg = "",
+  textColor = "text-green-600",
+}: {
+  label: string;
+  value: string;
+  bg?: string;
+  textColor?: string;
+}) => (
+  <tr className={bg}>
+    <td
+      className={`p-4 md:p-6 border-e border-b border-gray-300 ${textColor} font-bold text-left uppercase`}
+    >
+      {label}
+    </td>
+    <td
+      className={`p-4 md:p-6 border-b border-gray-300 ${textColor} font-bold text-right uppercase`}
+    >
+      {value}
+    </td>
+  </tr>
+);
+
+const CartSummary: React.FC<CartSummaryProps> = ({
+  totalBeforeTax,
+  tax,
+  totalAfterTax,
+  onCheckout,
+}) => {
   return (
     <div className="mt-6 flex flex-col items-end overflow-x-auto">
       <table className="w-full md:w-1/2 border-collapse border border-gray-300 mt-6">
         <tbody>
-          <tr>
-            <td className="p-4 md:p-6 border-e border-b border-gray-300 text-green-600 font-bold text-left uppercase">
-              Tổng tiền (Chưa thuế)
-            </td>
-            <td className="p-4 md:p-6 border-b border-gray-300 text-green-600 font-bold text-right uppercase">
-              {totalBeforeTax.toLocaleString('vi-VN')} đ
-            </td>
-          </tr>
-          <tr>
-            <td className="p-4 md:p-6 border-e border-b border-gray-300 text-green-600 font-bold text-left uppercase">
-              Thuế (VAT 10%)
-            </td>
-            <td className="p-4 md:p-6 border-b border-gray-300 text-green-600 font-bold text-right uppercase">
-              {tax.toLocaleString('vi-VN')} đ
-            </td>
-          </tr>
-          <tr className="bg-green-600">
-            <td className="p-4 md:p-6 border-e border-b border-gray-300 text-white text-lg md:text-xl font-bold text-left uppercase">
-              Tổng thanh toán
-            </td>
-            <td className="p-4 md:p-6 border-b border-gray-300 text-white text-lg md:text-xl font-bold text-right uppercase">
-              {totalAfterTax.toLocaleString('vi-VN')} đ
-            </td>
-          </tr>
+          <Row
+            label="Tổng tiền (Chưa thuế)"
+            value={`${totalBeforeTax.toLocaleString("vi-VN")} đ`}
+          />
+          <Row
+            label="Thuế (VAT 10%)"
+            value={`${tax.toLocaleString("vi-VN")} đ`}
+          />
+          <Row
+            label="Tổng thanh toán"
+            value={`${totalAfterTax.toLocaleString("vi-VN")} đ`}
+            bg="bg-green-600"
+            textColor="text-white text-lg md:text-xl"
+          />
         </tbody>
       </table>
 

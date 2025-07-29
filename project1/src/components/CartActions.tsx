@@ -1,4 +1,6 @@
-'use client';
+"use client";
+
+import { Button } from "@/components/ui/button";
 
 interface CartActionsProps {
   onCancel: () => void;
@@ -8,18 +10,19 @@ interface CartActionsProps {
 const CartActions: React.FC<CartActionsProps> = ({ onCancel, onContinue }) => {
   return (
     <div className="flex gap-4 justify-end pt-8">
-      <button
-        className="border border-green-600 text-green-500 font-bold rounded-3xl hover:bg-green-100 w-45 h-12"
+      <Button
+        variant="outline"
+        className="text-green-600 border-green-600 hover:bg-green-100"
         onClick={onCancel}
       >
         HỦY ĐƠN HÀNG
-      </button>
-      <button
-        className="bg-green-600 text-white font-bold rounded-3xl hover:bg-green-700 w-45 h-12"
+      </Button>
+      <Button
+        className="bg-green-600 text-white hover:bg-green-700"
         onClick={onContinue}
       >
         TIẾP TỤC MUA
-      </button>
+      </Button>
     </div>
   );
 };
