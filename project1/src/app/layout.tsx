@@ -31,10 +31,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
+        <div className="sticky top-0 z-50 bg-white shadow-sm">
+          <Header />
+        </div>
         <ReduxProvider>{children}</ReduxProvider>
         <Footer />
       </body>
     </html>
   );
 }
+
+
+

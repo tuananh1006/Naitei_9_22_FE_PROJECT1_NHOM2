@@ -10,23 +10,25 @@ import {
   FaBars,
   FaFacebook,
   FaTwitter,
-  FaClock
+  FaClock,
 } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 import { Input } from "../components/ui/input";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isDesktopMenuCollapsed, setIsDesktopMenuCollapsed] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const menuItems = [
     { text: "TRANG CHỦ", href: "/", hasDropdown: false },
-    { text: "GIỚI THIỆU", href: "#", hasDropdown: false },
+    { text: "GIỚI THIỆU", href: "/information", hasDropdown: false },
     { text: "SẢN PHẨM", href: "#", hasDropdown: true },
     { text: "SẢN PHẨM MỚI", href: "#", hasDropdown: true },
     { text: "TIN TỨC", href: "#", hasDropdown: false },
-    { text: "LIÊN HỆ", href: "#", hasDropdown: false },
+    { text: "LIÊN HỆ", href: "/contact", hasDropdown: false },
   ];
 
   const handleDesktopMenuToggle = () => {
@@ -60,10 +62,16 @@ export default function Header() {
 
           {/* Bên phải: đăng nhập / đăng ký */}
           <div className="flex items-center space-x-4 translate-x-55">
-            <Link href="/login" className="hover:text-gray-300 flex items-center gap-1">
+            <Link
+              href="/login"
+              className="hover:text-gray-300 flex items-center gap-1"
+            >
               <FaSignInAlt /> Đăng nhập
             </Link>
-            <Link href="/register" className="hover:text-gray-300 flex items-center gap-1">
+            <Link
+              href="/register"
+              className="hover:text-gray-300 flex items-center gap-1"
+            >
               <FaUser /> Đăng ký
             </Link>
           </div>
@@ -126,10 +134,13 @@ export default function Header() {
                 </div>
 
                 {/* Giỏ hàng */}
-                <div className="flex items-center gap-2 text-sm text-gray-700 whitespace-nowrap">
+                <Link
+                  href="/cart"
+                  className="flex items-center gap-2 text-sm text-gray-700 whitespace-nowrap hover:text-emerald-500 transition-colors"
+                >
                   <FaShoppingBasket className="text-lg" />
                   <span>0 Sản phẩm</span>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -141,7 +152,7 @@ export default function Header() {
         {/* Mobile Navigation */}
         <div className="lg:hidden">
           <div className="flex justify-between items-center px-4 py-4">
-            <button 
+            <button
               onClick={handleMobileMenuToggle}
               className="hover:text-emerald-200 transition-colors"
             >
@@ -152,7 +163,7 @@ export default function Header() {
               <FaShoppingBasket className="text-xl" />
             </div>
           </div>
-          
+
           {/* Mobile Menu Dropdown */}
           {isMobileMenuOpen && (
             <div className="bg-emerald-600 px-4 py-2">
@@ -161,7 +172,9 @@ export default function Header() {
                   <li key={index}>
                     <Link
                       href={item.href}
-                      className="block py-2 hover:text-emerald-200 transition-colors"
+                      className={`block py-2 hover:text-emerald-200 transition-colors ${
+                        pathname === item.href ? "bg-emerald-700 rounded" : ""
+                      }`}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.text}
@@ -178,25 +191,29 @@ export default function Header() {
         <div className="hidden lg:block relative overflow-hidden">
           <ul className="flex justify-center px-4 py-2 items-center space-x-8 relative">
             <li className="flex items-center gap-1 z-10">
-              <button 
+              <button
                 onClick={handleDesktopMenuToggle}
                 className="hover:text-emerald-200 transition-colors"
               >
                 <FaBars className="text-base" />
               </button>
             </li>
-            <div 
+            <div
               className={`flex items-center space-x-8 transition-all duration-500 ease-in-out ${
-                isDesktopMenuCollapsed 
-                  ? 'transform -translate-x-full opacity-0' 
-                  : 'transform translate-x-0 opacity-100'
+                isDesktopMenuCollapsed
+                  ? "transform -translate-x-full opacity-0"
+                  : "transform translate-x-0 opacity-100"
               }`}
             >
               {menuItems.map((item, index) => (
                 <li key={index} className="flex items-center gap-1">
                   <Link
                     href={item.href}
-                    className="flex items-center gap-1 hover:text-emerald-200 transition-colors whitespace-nowrap"
+                    className={`flex items-center gap-1 hover:text-emerald-200 transition-colors whitespace-nowrap ${
+                      pathname === item.href
+                        ? "bg-emerald-700 rounded px-2 py-1"
+                        : ""
+                    }`}
                   >
                     {item.text}
                     {item.hasDropdown && " ▾"}
@@ -210,5 +227,6 @@ export default function Header() {
     </header>
   );
 }
+
 
 
