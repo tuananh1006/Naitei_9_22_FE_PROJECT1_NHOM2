@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "email": "admin@example.com",
       "password": "123456",
       "fullName": "Nguyễn Văn Admin",
@@ -9,7 +9,7 @@
       "website": "https://admin.com"
     },
     {
-      "id": 2,
+      "id": "2",
       "email": "user@example.com",
       "password": "123456",
       "fullName": "Trần Thị User",
@@ -17,12 +17,880 @@
       "website": "https://user.com"
     },
     {
-      "id": 3,
+      "id": "3",
       "email": "test@example.com",
       "password": "password",
       "fullName": "Lê Văn Test",
       "phone": "0555666777",
       "website": "https://test.com"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Cây Dạ Lam",
+      "price": 4599000,
+      "oldPrice": 5000000,
+      "discount": 10,
+      "type": [
+        "Cây trang trí",
+        "Cây phong thuỷ",
+        "Cây nội thất"
+      ],
+      "images": [
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863007/spx2-15_ymqj8l.png",
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863005/spx2-6_x2lkui.png",
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863006/spx2-13_vkjetm.png",
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863006/spx2-5_k8q7fm.png",
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863006/spx2-12_qdkhmk.png"
+      ],
+      "description": "Cây này thích hợp loại thực, tháo ướt nhẹ mất lẫy, cây loại không tên để 0.8-1.2m. Là hoa bông xinh xắn với nguổi cỏ ăn có thể, chiếu mỏng nhuyên liêu sắp về lá. 0.8m. Lá để may năm nhặy ở mai này, được rét về 8 để 9 mai năng bon cỡm về để sảy không bọc.",
+      "category": "cây cảnh",
+      "rating": 5,
+      "reviewCount": 15,
+      "inStock": true,
+      "variants": [
+        {
+          "id": "small",
+          "name": "Chậu nhỏ (15cm)",
+          "price": 4599000,
+          "inStock": true
+        },
+        {
+          "id": "medium",
+          "name": "Chậu vừa (20cm)",
+          "price": 5299000,
+          "inStock": true
+        },
+        {
+          "id": "large",
+          "name": "Chậu lớn (25cm)",
+          "price": 6599000,
+          "inStock": false
+        }
+      ],
+      "specifications": {
+        "Kích thước": "0.8-1.2m",
+        "Màu sắc": "Xanh lá",
+        "Xuất xứ": "Việt Nam",
+        "Độ tuổi": "2-3 năm"
+      },
+      "care_instructions": "Tưới nước 2-3 lần/tuần, đặt nơi có ánh sáng gián tiếp, tránh ánh nắng trực tiếp."
+    },
+    {
+      "id": "2",
+      "name": "Cây co Nhật",
+      "price": 250000,
+      "oldPrice": 300000,
+      "discount": 10,
+      "type": [
+        "Cây trang trí",
+        "Cây phong thuỷ",
+        "Cây nội thất"
+      ],
+      "images": [
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863007/spx2-15_ymqj8l.png",
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863005/spx2-6_x2lkui.png",
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863006/spx2-13_vkjetm.png",
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863006/spx2-12_qdkhmk.png"
+      ],
+      "description": "Cây co Nhật với lá xanh tươi mát, dễ chăm sóc và phù hợp với khí hậu Việt Nam.",
+      "category": "cây cảnh",
+      "rating": 4,
+      "reviewCount": 8,
+      "inStock": true,
+      "variants": [
+        {
+          "id": "default",
+          "name": "Chậu tiêu chuẩn",
+          "price": 250000,
+          "inStock": true
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Cây Hồng Môn",
+      "price": 250000,
+      "oldPrice": 300000,
+      "discount": 10,
+      "type": [
+        "Cây trang trí",
+        "Cây phong thuỷ",
+        "Cây nội thất"
+      ],
+      "images": [
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863007/spx2-15_ymqj8l.png",
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863005/spx2-6_x2lkui.png",
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863006/spx2-5_k8q7fm.png",
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863006/spx2-12_qdkhmk.png"
+      ],
+      "description": "Cây Hồng Môn với hoa đỏ rực rỡ, mang lại may mắn và thịnh vượng cho gia đình.",
+      "category": "cây hoa",
+      "rating": 5,
+      "reviewCount": 12,
+      "inStock": true,
+      "variants": [
+        {
+          "id": "default",
+          "name": "Chậu tiêu chuẩn",
+          "price": 250000,
+          "inStock": true
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Cây phát tài",
+      "price": 250000,
+      "oldPrice": 300000,
+      "discount": 10,
+      "type": [
+        "Cây trang trí",
+        "Cây phong thuỷ",
+        "Cây nội thất"
+      ],
+      "images": [
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863007/spx2-15_ymqj8l.png",
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863006/spx2-12_qdkhmk.png"
+      ],
+      "description": "Cây phát tài mang ý nghĩa phong thủy tốt, thu hút tài lộc và may mắn.",
+      "category": "cây phong thủy",
+      "rating": 4,
+      "reviewCount": 6,
+      "inStock": true,
+      "variants": [
+        {
+          "id": "default",
+          "name": "Chậu tiêu chuẩn",
+          "price": 250000,
+          "inStock": true
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Cây Kim Ngân",
+      "price": 250000,
+      "oldPrice": 300000,
+      "discount": 10,
+      "type": [
+        "Cây trang trí",
+        "Cây phong thuỷ",
+        "Cây nội thất"
+      ],
+      "images": [
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863007/spx2-15_ymqj8l.png",
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863005/spx2-6_x2lkui.png",
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863006/spx2-13_vkjetm.png",
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863006/spx2-5_k8q7fm.pngr",
+        "https://res.cloudinary.com/dhmutopv5/image/upload/v1753863006/spx2-12_qdkhmk.png"
+      ],
+      "description": "Cây Kim Ngân với lá hình trái tim, biểu tượng của tình yêu và hạnh phúc.",
+      "category": "cây cảnh",
+      "rating": 5,
+      "reviewCount": 10,
+      "inStock": true,
+      "variants": [
+        {
+          "id": "default",
+          "name": "Chậu tiêu chuẩn",
+          "price": 250000,
+          "inStock": true
+        }
+      ]
+    }
+  ],
+  "cart": [
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 4
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "variant": {
+        "id": "small",
+        "name": "Chậu nhỏ (15cm)",
+        "price": 4599000,
+        "inStock": true
+      },
+      "quantity": 1
     }
   ],
   "productInfo": [
@@ -34,8 +902,13 @@
       "description": "Một loài cây mọng nước thuộc họ xương rồng, có nguồn gốc từ bán đảo Ả Rập. Cây lô hội được biết đến với nhiều công dụng trong y học và làm đẹp.",
       "image": "/dataset/spx2-1.png",
       "newArival": true,
-      "type": ["Cây để bàn", "Cây nội thất"],
-      "color": ["Xanh lá"]
+      "type": [
+        "Cây để bàn",
+        "Cây nội thất"
+      ],
+      "color": [
+        "Xanh lá"
+      ]
     },
     {
       "id": "2",
@@ -45,8 +918,14 @@
       "description": "Cây được trồng để trang trí nhờ hình dáng độc đáo của lá. Hơn thế, cây được cho là có tác dụng duy trì hòa khí và sự ấm êm trong gia đình theo quan niệm phong thủy.",
       "image": "/dataset/spx2-2.png",
       "newArival": true,
-      "type": ["Cây trang trí", "Cây phong thuỷ", "Cây nội thất"],
-      "color": ["Xanh lá"]
+      "type": [
+        "Cây trang trí",
+        "Cây phong thuỷ",
+        "Cây nội thất"
+      ],
+      "color": [
+        "Xanh lá"
+      ]
     },
     {
       "id": "3",
@@ -62,7 +941,11 @@
         "Cây phong thuỷ",
         "Cây nghệ thuật"
       ],
-      "color": ["Đỏ", "Xanh lá", "Tím"]
+      "color": [
+        "Đỏ",
+        "Xanh lá",
+        "Tím"
+      ]
     },
     {
       "id": "4",
@@ -72,8 +955,17 @@
       "description": "Hoa có hương thơm dễ chịu, màu sắc tươi tắn, giúp xua tan mệt mỏi và mang lại cảm giác thư giãn. Hoa thường được chọn làm quà Tết, tượng trưng cho lời chúc một năm mới trọn vẹn và ấm áp yêu thương. Về phong thủy, hoa vừa gợi nhớ nỗi buồn sâu kín, vừa thể hiện sự đan xen giữa ganh ghét và lòng yêu thương.",
       "image": "/dataset/spx2-4.png",
       "newArival": true,
-      "type": ["Cây nghệ thuật", "Cây có hoa", "Cây phong thuỷ"],
-      "color": ["Tím", "Xanh lam", "Hồng", "Cam"]
+      "type": [
+        "Cây nghệ thuật",
+        "Cây có hoa",
+        "Cây phong thuỷ"
+      ],
+      "color": [
+        "Tím",
+        "Xanh lam",
+        "Hồng",
+        "Cam"
+      ]
     },
     {
       "id": "5",
@@ -83,8 +975,13 @@
       "description": "Cây xương rồng là một loại cây cảnh đẹp thường được trồng trong nhà hoặc ngoài trời để trang trí. Xương rồng có khả năng chịu nắng tốt và dễ chăm sóc.",
       "image": "/dataset/spx2-5.png",
       "newArival": false,
-      "type": ["Cây để bàn", "Cây nội thất"],
-      "color": ["Xanh lá"]
+      "type": [
+        "Cây để bàn",
+        "Cây nội thất"
+      ],
+      "color": [
+        "Xanh lá"
+      ]
     },
     {
       "id": "6",
@@ -94,8 +991,13 @@
       "description": "Cây dứa nhỏ là một loại cây cảnh dễ trồng, thường được sử dụng để trang trí trong nhà. Cây có lá dài, màu xanh tươi và hoa hình chóp đặc trưng. Dứa nhỏ không chỉ mang lại vẻ đẹp cho không gian sống mà còn giúp thanh lọc không khí.",
       "image": "/dataset/spx2-6.png",
       "newArival": false,
-      "type": ["Cây để bàn", "Cây nội thất"],
-      "color": ["Xanh lá"]
+      "type": [
+        "Cây để bàn",
+        "Cây nội thất"
+      ],
+      "color": [
+        "Xanh lá"
+      ]
     },
     {
       "id": "7",
@@ -105,8 +1007,13 @@
       "description": "Cây xương rồng con là một loại cây cảnh đẹp, thường được trồng trong nhà hoặc văn phòng. Cây có lá dài, màu xanh tươi và hoa hình chóp đặc trưng. Xương rồng con không chỉ mang lại vẻ đẹp cho không gian sống mà còn giúp thanh lọc không khí.",
       "image": "/dataset/spx2-7.png",
       "newArival": true,
-      "type": ["Cây để bàn", "Cây nội thất"],
-      "color": ["Xanh lá"]
+      "type": [
+        "Cây để bàn",
+        "Cây nội thất"
+      ],
+      "color": [
+        "Xanh lá"
+      ]
     },
     {
       "id": "8",
@@ -116,8 +1023,16 @@
       "description": "Sen đá đất là một loài sen đá đại diện cho sức sống bền bỉ và sự vĩnh cửu theo thời gian. Lá cây nhỏ xinh, có sự hòa trộn đặc biệt giữa màu xanh lá với màu xanh da trời mà không loài cây nào có được. Sen đá đất là cây lá nhỏ đem đến rất nhiều tác dụng rất tốt cho sức khỏe con người, chúng giúp hấp thụ các tia bức xạ có hại từ máy tính, điện thoại… Vì thế rất nhiều người ưa chuộng lựa chọn loại cây này làm cây cảnh trang trí nội thất nhà ở, văn phòng.",
       "image": "/dataset/spx2-8.png",
       "newArival": false,
-      "type": ["Cây để bàn", "Cây nội thất", "Cây phong thuỷ"],
-      "color": ["Đỏ", "Xanh lá", "Tím"]
+      "type": [
+        "Cây để bàn",
+        "Cây nội thất",
+        "Cây phong thuỷ"
+      ],
+      "color": [
+        "Đỏ",
+        "Xanh lá",
+        "Tím"
+      ]
     },
     {
       "id": "9",
@@ -127,8 +1042,14 @@
       "description": "Cây Ổ Phụng là loài dương xỉ đặc biệt gây ấn tượng bởi chiếc lá lớn xòe tròn từ gốc, tạo hình như một tổ chim phượng uy nghi. Với xuất xứ từ các rừng mưa nhiệt đới Đông Nam Á như Philippines, Việt Nam hay Trung Quốc, cây thường mọc ký sinh trên thân cây già hoặc bám trên đá ẩm để hút chất dinh dưỡng tự tạo. Theo quan niệm phong thủy Châu Á, từ hình ảnh “ổ phụng” đã mang trong mình ý nghĩa sâu sắc về sự gắn kết gia đình, che chở và hòa khí; đồng thời biểu trưng cho sức sống kiên cường và khả năng vươn lên từ nghịch cảnh như chim phượng tái sinh từ đám tro tàn. Đây chính là lý do nhiều gia đình chọn trồng cây này trong nhà hoặc văn phòng, không chỉ làm đẹp không gian mà còn mang vượng khí, tài lộc và sự bình an đến tổ ấm.",
       "image": "/dataset/spx2-9.png",
       "newArival": false,
-      "type": ["Cây để bàn", "Cây nội thất", "Cây phong thuỷ"],
-      "color": ["Xanh lá"]
+      "type": [
+        "Cây để bàn",
+        "Cây nội thất",
+        "Cây phong thuỷ"
+      ],
+      "color": [
+        "Xanh lá"
+      ]
     },
     {
       "id": "10",
@@ -138,8 +1059,14 @@
       "description": "Cây dương xỉ Boston không chỉ đẹp mà còn mang lại nhiều lợi ích thiết thực. Chúng giúp thanh lọc không khí, điều hòa độ ẩm, giảm căng thẳng và cải thiện sức khỏe hô hấp. Chiết xuất từ dương xỉ còn có tác dụng chống oxy hóa, chống viêm và hỗ trợ điều trị các bệnh ngoài da. Trong Đông y, dương xỉ được dùng để chữa nhiều chứng bệnh như đau lưng, tiêu chảy, bong gân, bạch biến, và thận hư. Với hình dáng xanh mát, cây còn rất được ưa chuộng trong trang trí nội thất và sân vườn",
       "image": "/dataset/spx2-10.png",
       "newArival": true,
-      "type": ["Cây để bàn", "Cây nội thất", "Cây trang trí"],
-      "color": ["Xanh lá"]
+      "type": [
+        "Cây để bàn",
+        "Cây nội thất",
+        "Cây trang trí"
+      ],
+      "color": [
+        "Xanh lá"
+      ]
     },
     {
       "id": "11",
@@ -149,8 +1076,14 @@
       "description": "Cây Ổ Phụng là loài dương xỉ đặc biệt gây ấn tượng bởi chiếc lá lớn xòe tròn từ gốc, tạo hình như một tổ chim phượng uy nghi. Với xuất xứ từ các rừng mưa nhiệt đới Đông Nam Á như Philippines, Việt Nam hay Trung Quốc, cây thường mọc ký sinh trên thân cây già hoặc bám trên đá ẩm để hút chất dinh dưỡng tự tạo. Theo quan niệm phong thủy Châu Á, từ hình ảnh “ổ phụng” đã mang trong mình ý nghĩa sâu sắc về sự gắn kết gia đình, che chở và hòa khí; đồng thời biểu trưng cho sức sống kiên cường và khả năng vươn lên từ nghịch cảnh như chim phượng tái sinh từ đám tro tàn. Đây chính là lý do nhiều gia đình chọn trồng cây này trong nhà hoặc văn phòng, không chỉ làm đẹp không gian mà còn mang vượng khí, tài lộc và sự bình an đến tổ ấm.",
       "image": "/dataset/spx2-11.png",
       "newArival": true,
-      "type": ["Cây để bàn", "Cây nội thất", "Cây phong thuỷ"],
-      "color": ["Xanh lá"]
+      "type": [
+        "Cây để bàn",
+        "Cây nội thất",
+        "Cây phong thuỷ"
+      ],
+      "color": [
+        "Xanh lá"
+      ]
     },
     {
       "id": "12",
@@ -160,8 +1093,14 @@
       "description": "Là một loại cây cảnh độc đáo, mang vẻ đẹp mạnh mẽ và ấn tượng. Với những chiếc lá xanh mượt, dài và nhọn, cây Móng Rồng không chỉ tạo điểm nhấn cho không gian sống mà còn có khả năng thanh lọc không khí, đem lại sự tươi mát và trong lành. Đây là lựa chọn hoàn hảo cho những ai yêu thích sự giản đơn nhưng vẫn muốn tô điểm cho ngôi nhà hay văn phòng của mình bằng một vẻ đẹp thiên nhiên đầy sức sống. Hơn nữa, cây Móng Rồng còn được xem như biểu tượng của sự may mắn, thịnh vượng, giúp mang đến năng lượng tích cực cho không gian.",
       "image": "/dataset/spx2-12.png",
       "newArival": false,
-      "type": ["Cây để bàn", "Cây nội thất", "Cây trang trí"],
-      "color": ["Tím"]
+      "type": [
+        "Cây để bàn",
+        "Cây nội thất",
+        "Cây trang trí"
+      ],
+      "color": [
+        "Tím"
+      ]
     },
     {
       "id": "13",
@@ -171,8 +1110,13 @@
       "description": "Cây ngọc bích hay còn được gọi là cây sen đá ngọc bích, cây phỉ thúy, có tên khoa học là Crassula ovata. Là loại cây có nguồn gốc từ Nam Phi, cây ngọc bích tượng trưng cho tiền tài, sự may mắn và tài lộc.Cây ngọc bích khi sử dụng làm cảnh có tác dụng thanh lọc không khí, kích thích thị giác, mang lại không khí trong lành, tươi mới hơn cho không gian xung quanh, từ đó giúp hạn chế các bệnh về đường hô hấp.Theo phong thủy, cây ngọc bích tùy theo hướng đặt khác nhau sẽ mang đến những tác dụng như: Giúp gia đình hòa thuận, sức khỏe dồi dào, mang đến may mắn, tài lộc, khai thông trí tuệ, khả năng sáng tạo. Ngoài ra, người ta còn trồng cây tạo hình bonsai từ cây ngọc bích để dùng làm món quà cho người thân, bạn bè, quà mừng khai trương cũng vô cùng ý nghĩa.",
       "image": "/dataset/spx2-13.png",
       "newArival": true,
-      "type": ["Cây để bàn", "Cây nội thất"],
-      "color": ["Vàng"]
+      "type": [
+        "Cây để bàn",
+        "Cây nội thất"
+      ],
+      "color": [
+        "Vàng"
+      ]
     },
     {
       "id": "14",
@@ -182,8 +1126,14 @@
       "description": "Cây lô hội nhỏ là một loại cây cảnh đẹp với lá màu xanh mướt. Cây thường được trồng trong nhà hoặc ngoài trời để trang trí.",
       "image": "/dataset/spx2-14.png",
       "newArival": false,
-      "type": ["Cây để bàn", "Cây nội thất"],
-      "color": ["Trắng", "Xanh lá"]
+      "type": [
+        "Cây để bàn",
+        "Cây nội thất"
+      ],
+      "color": [
+        "Trắng",
+        "Xanh lá"
+      ]
     },
     {
       "id": "15",
@@ -193,10 +1143,140 @@
       "description": "Cây sen đá đỏ là một loại cây cảnh đẹp với hoa màu đỏ rực rỡ. Cây thường được trồng trong nhà hoặc ngoài trời để trang trí. Sen đá đỏ có khả năng chịu nắng tốt và dễ chăm sóc.",
       "image": "/dataset/spx2-15.png",
       "newArival": true,
-      "type": ["Cây để bàn", "Cây nội thất", "Cây có hoa", "Cây nghệ thuật"],
-      "color": ["Hồng", "Đỏ", "Xanh lá"]
+      "type": [
+        "Cây để bàn",
+        "Cây nội thất",
+        "Cây có hoa",
+        "Cây nghệ thuật"
+      ],
+      "color": [
+        "Hồng",
+        "Đỏ",
+        "Xanh lá"
+      ]
     }
   ],
-  "newsInfo":[]
+  "reviews": [
+    {
+      "id": "1",
+      "userId": 1,
+      "productId": 1,
+      "userName": "Nguyễn Văn A",
+      "rating": 5,
+      "comment": "Cây rất đẹp, giao hàng nhanh. Đóng gói cẩn thận. Tôi rất hài lòng với sản phẩm này.",
+      "createdAt": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "2",
+      "userId": 2,
+      "productId": 1,
+      "userName": "Trần Thị B",
+      "rating": 4,
+      "comment": "Cây khỏe mạnh, lá xanh tươi. Chỉ có điều chậu hơi nhỏ so với mong đợi.",
+      "createdAt": "2024-01-10T14:20:00Z"
+    },
+    {
+      "id": "3",
+      "userId": 3,
+      "productId": 1,
+      "userName": "Lê Văn C",
+      "rating": 5,
+      "comment": "Tuyệt vời! Cây này làm không gian nhà tôi sinh động hơn rất nhiều. Sẽ mua thêm.",
+      "createdAt": "2024-01-08T09:15:00Z"
+    },
+    {
+      "id": "4",
+      "userId": 2,
+      "productId": 2,
+      "userName": "Phạm Thị D",
+      "rating": 4,
+      "comment": "Cây co Nhật rất dễ thương, phù hợp trang trí bàn làm việc. Giá cả hợp lý.",
+      "createdAt": "2024-01-12T16:45:00Z"
+    },
+    {
+      "id": "5",
+      "userId": 3,
+      "productId": 2,
+      "userName": "Hoàng Văn E",
+      "rating": 4,
+      "comment": "Chất lượng tốt, cây khỏe mạnh. Giao hàng hơi chậm nhưng đóng gói cẩn thận.",
+      "createdAt": "2024-01-09T11:30:00Z"
+    },
+    {
+      "id": "fa26",
+      "productId": "1",
+      "rating": 5,
+      "comment": "oo",
+      "userId": 1,
+      "userName": "Người dùng",
+      "createdAt": "2025-07-30T09:05:39.651Z"
+    },
+    {
+      "id": "79aa",
+      "productId": "1",
+      "rating": 4,
+      "comment": "okok",
+      "userId": 1,
+      "userName": "Người dùng",
+      "createdAt": "2025-07-30T09:10:44.646Z"
+    },
+    {
+      "id": "5762",
+      "productId": "1",
+      "rating": 3,
+      "comment": "ok",
+      "userId": 1,
+      "userName": "Người dùng",
+      "createdAt": "2025-07-30T09:48:44.247Z"
+    },
+    {
+      "id": "13dd",
+      "productId": "1",
+      "rating": 5,
+      "comment": "hhh",
+      "userId": 1,
+      "userName": "Người dùng",
+      "createdAt": "2025-07-30T09:53:24.864Z"
+    },
+    {
+      "id": "f196",
+      "productId": "1",
+      "rating": 4,
+      "comment": "ok\n\n\n\n\n\n\n",
+      "userId": 1,
+      "userName": "Người dùng",
+      "createdAt": "2025-07-31T07:54:17.990Z"
+    },
+    {
+      "id": "8135",
+      "productId": "1",
+      "rating": 4,
+      "comment": "ok\n\n\n\n\n\n\n",
+      "userId": 1,
+      "userName": "Người dùng",
+      "createdAt": "2025-07-31T07:56:46.056Z"
+    },
+    {
+      "id": "19cb",
+      "productId": "1",
+      "rating": 5,
+      "comment": "gfhfg",
+      "userId": 1,
+      "userName": "Người dùng",
+      "createdAt": "2025-07-31T08:15:30.049Z"
+    },
+    {
+      "id": "ec1c",
+      "productId": "1",
+      "rating": 4,
+      "comment": "ádsad",
+      "userId": 1,
+      "userName": "Người dùng",
+      "createdAt": "2025-07-31T08:15:39.253Z"
+    }
+  ],
+  "newsInfo": []
 }
+
+
 
