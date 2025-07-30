@@ -1,6 +1,6 @@
 import { FaSearch, FaStar } from "react-icons/fa";
 import Image from "next/image";
-import { Product } from "../types/Product";
+import { Product, formatCurrentPrice, formatOldPrice } from "../types/Product";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -13,9 +13,8 @@ export default function ProductCard({
   product,
   className = "",
 }: ProductCardProps) {
-  const { name, price, oldPrice, image, isNew, discount } = product;
+  const { name, image, newArival, discount } = product;
   const hasDiscount = discount > 0;
-  const hasPriceChange = price !== oldPrice;
 
   return (
     <div
@@ -37,7 +36,7 @@ export default function ProductCard({
             -{discount}%
           </Badge>
         )}
-        {isNew && (
+        {newArival && (
           <Badge
             className="absolute top-1 right-1 sm:top-2 sm:right-2 bg-green-600 text-white text-[10px] sm:text-xs px-1.5 py-0.5 sm:px-2 sm:py-1 z-10 hover:bg-green-600"
           >
@@ -78,10 +77,10 @@ export default function ProductCard({
             ))}
           </div>
           <div className="text-red-600 font-semibold text-sm sm:text-base lg:text-lg">
-            {price.toLocaleString("vi-VN")} đ
-            {hasPriceChange && (
+            {formatCurrentPrice(product)} đ
+            {hasDiscount && (
               <span className="line-through text-gray-400 text-xs sm:text-sm ml-1 sm:ml-2 block sm:inline">
-                {oldPrice.toLocaleString("vi-VN")} đ
+                {formatOldPrice(product)} đ
               </span>
             )}
           </div>

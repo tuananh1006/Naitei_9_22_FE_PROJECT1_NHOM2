@@ -2,7 +2,8 @@ import { Product } from "../types/Product";
 import axiosInstance from "./AxiosCustom";
 
 export async function getProducts(): Promise<Product[]> {
-  const response = await axiosInstance.get<Product[]>("/landingProduct");
+  const response = await axiosInstance.get<Product[]>("/productInfo");
+  console.log("Fetched products:", response.data);
   return response.data;
 }
 

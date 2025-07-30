@@ -10,6 +10,7 @@ import img_demo from "../../public/slider/banner.png";
 import img3 from "../../public/dataset/spx2-3.png";
 import img4 from "../../public/dataset/spx2-4.png";
 import img5 from "../../public/dataset/spx2-5.png";
+import NewsletterPopup from "@/components/Popup";
 
 const newsList = [
   {
@@ -38,6 +39,7 @@ const newsList = [
 export default function Home() {
   return (
     <>
+      <NewsletterPopup delay={50} />
       {/* Slider Section - Full Width */}
       <Slider />
 

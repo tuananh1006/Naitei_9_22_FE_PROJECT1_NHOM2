@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import ProductCard from "./ProductCard";
 import { getProducts } from "../services/ProductService";
 import { Product } from "../types/Product";
@@ -14,23 +14,33 @@ const DESKTOP_LAYOUT_CONFIG = [
   { index: 5, className: "col-span-2 row-span-2 col-start-3 row-start-2 [&_img]:!aspect-[4/3]" }
 ];
 
+// Function to shuffle array and get random items
+const getRandomProducts = (products: Product[], count: number = 6): Product[] => {
+  const shuffled = [...products].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+};
+
 export default function FeaturedProducts() {
   const [products, setProducts] = useState<Product[]>([]);
+  
+  const displayProducts = useMemo(() => {
+    return getRandomProducts(products, 6);
+  }, [products]);
 
   useEffect(() => {
-    getProducts().then(setProducts).catch(console.error);
+    getProducts().then((allProducts) => {
+      setProducts(allProducts);
+    }).catch(console.error);
   }, []);
 
   if (products.length === 0) return <div>Loading...</div>;
 
-  const renderProducts = (config?: typeof DESKTOP_LAYOUT_CONFIG ) => {
-    const displayProducts = products.slice(0, 6);
-    
+  const renderProducts = (config?: typeof DESKTOP_LAYOUT_CONFIG) => {
     if (config) {
       return config.map(({ index, className }) => 
         displayProducts[index] && (
           <ProductCard 
-            key={index} 
+            key={`${displayProducts[index].id}-${index}`} 
             product={displayProducts[index]} 
             className={className} 
           />
@@ -39,7 +49,7 @@ export default function FeaturedProducts() {
     }
     
     return displayProducts.map((product, index) => (
-      <ProductCard key={index} product={product} />
+      <ProductCard key={`${product.id}-${index}`} product={product} />
     ));
   };
 
@@ -57,4 +67,6 @@ export default function FeaturedProducts() {
     </div>
   );
 }
+
+
 
