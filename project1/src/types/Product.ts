@@ -1,14 +1,43 @@
-export type Product = {
-  id: string;
+export interface Product {
+  id: number;
   name: string;
+  price: number;
   oldPrice: number;
   discount: number;
+  images: string[];
   description: string;
-  image: string;
+  category: string;
+  rating: number;
+  inStock: boolean;
+  variants?: ProductVariant[];
+  specifications?: Record<string, string>;
   newArival: boolean;
-  type: string[];
-  color: string[];
-};
+  type?: string[];
+}
+
+export interface ProductVariant {
+  id: number;
+  name: string;
+  price: number;
+  inStock: boolean;
+}
+
+export interface Review {
+  id: number;
+  userId: number;
+  productId: number;
+  rating: number;
+  comment: string;
+  userName: string;
+  createdAt: string;
+}
+
+export interface CartItem {
+  id: number;
+  variant?: ProductVariant;
+  quantity: number;
+  product?: Product;
+} 
 
 // Helper function to calculate current price from oldPrice
 export const getCurrentPrice = (product: Product): number => {
@@ -31,4 +60,5 @@ export const formatOldPrice = (product: Product): string => {
 export const formatCurrentPrice = (product: Product): string => {
   return formatPrice(getCurrentPrice(product));
 };
+
 

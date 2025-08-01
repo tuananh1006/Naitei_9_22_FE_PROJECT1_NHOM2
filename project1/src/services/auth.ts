@@ -68,3 +68,10 @@ export const getAuthToken = () => {
   return getCookie(COOKIE_NAMES.AUTH_TOKEN);
 };
 
+export const getCurrentUser = () => {
+  return {
+    id: 1,
+    name: "Người dùng"
+  };
+};
+
