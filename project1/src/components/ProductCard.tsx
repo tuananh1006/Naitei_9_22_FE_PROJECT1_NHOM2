@@ -13,7 +13,7 @@ export default function ProductCard({
   product,
   className = "",
 }: ProductCardProps) {
-  const { name, image, newArival, discount } = product;
+  const { name, images, newArival, discount } = product;
   const hasDiscount = discount > 0;
 
   return (
@@ -22,7 +22,7 @@ export default function ProductCard({
     >
       <div className="relative">
         <Image
-          src={image}
+          src={images[0]}
           alt={name}
           width={400}
           height={300}

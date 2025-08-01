@@ -42,7 +42,7 @@ export default function MostBuy() {
               className="flex items-center gap-3 p-3 border border-gray-200 rounded-lg hover:shadow-sm transition-shadow"
             >
               <Image
-                src={product.image}
+                src={product.images[0]}
                 alt={product.name}
                 width={60}
                 height={60}
