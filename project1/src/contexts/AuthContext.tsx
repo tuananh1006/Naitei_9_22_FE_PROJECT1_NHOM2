@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { isAuthenticated, getCurrentUser } from "@/services/auth";
 import type { User } from "@/types/User";
 
@@ -41,12 +42,19 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     }
   };
 
+  const pathname = usePathname();
   useEffect(() => {
     refreshAuth();
-  }, []);
+    const interval = setInterval(() => {
+      refreshAuth();
+    }, 2 * 60 * 1000); // 2 phút
+    return () => clearInterval(interval);
+  }, [pathname]);
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, currentUser, loading, refreshAuth }}>
+    <AuthContext.Provider
+      value={{ isLoggedIn, currentUser, loading, refreshAuth }}
+    >
       {children}
     </AuthContext.Provider>
   );
@@ -59,4 +67,3 @@ export const useAuth = () => {
   }
   return context;
 };
-
